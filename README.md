@@ -17,6 +17,20 @@ Slack message / message_changed
 
 The LLM only extracts facts and writes email prose. Every decision about **what to change** is deterministic, testable code.
 
+## Demo (2 minutes)
+
+**[docs/demo.mp4](docs/demo.mp4)** — real run, no mocks: a Slack `@Amend` instruction creates the HubSpot deal and sends the Gmail proposal; a thread correction repairs only the stale fields and sends the fix as a reply in the same Gmail thread; then a draft-only update, shown in Slack → Gmail → HubSpot → Lemma traces.
+
+## External apps
+
+Slack (Bolt, Socket Mode) · HubSpot CRM (deals) · Gmail (drafts, send, threaded replies, attachments) · Claude (`claude-opus-5`, fact extraction / routing / email writing) · Neon Postgres (ledger) · Lemma (tracing).
+
+## Reliability testing
+
+- `pnpm test` — 667 adversarial tests (races, retries, crash recovery, human edits, prompt injection, header injection, attachments).
+- `pnpm eval` — 60 end-to-end scenarios against fault-injecting fakes of every app; `pnpm eval:pg` runs the same on the real Postgres ledger. Latest: 60/60, duplicates 0, human edits overwritten 0, stale facts 0, self-checks 543/543.
+- Every run verifies HubSpot and Gmail after writing and posts the check count in Slack. See [docs/reliability-brief.md](docs/reliability-brief.md).
+
 ## Using it in Slack
 
 | You do | Amend does |
