@@ -19,7 +19,7 @@ The LLM only extracts facts and writes email prose. Every decision about **what 
 
 ## Demo (2 minutes)
 
-**[docs/demo.mp4](docs/demo.mp4)** — real run, no mocks: a Slack `@Amend` instruction creates the HubSpot deal and sends the Gmail proposal; a thread correction repairs only the stale fields and sends the fix as a reply in the same Gmail thread; then a draft-only update, shown in Slack → Gmail → HubSpot → Lemma traces.
+**[Watch on YouTube](https://youtu.be/gtzLwmcxU6A)** (also in the repo: [docs/demo.mp4](docs/demo.mp4)) — real run, no mocks: a Slack `@Amend` instruction creates the HubSpot deal and sends the Gmail proposal; a thread correction repairs only the stale fields and sends the fix as a reply in the same Gmail thread; then a draft-only update, shown in Slack → Gmail → HubSpot → Lemma traces.
 
 ## External apps
 
