@@ -1,0 +1,39 @@
+{
+  "name": "amend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "start": "tsx src/main.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "eval": "tsx evals/runner.ts",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "setup:hubspot": "tsx scripts/setup-hubspot.ts",
+    "setup:gmail": "tsx scripts/gmail-auth.ts",
+    "eval:extraction": "tsx evals/extraction.ts",
+    "viewer:demo": "tsx scripts/viewer-demo.ts",
+    "eval:pg": "EVAL_DATABASE_URL=postgres://postgres:amend@127.0.0.1:55432/amend tsx evals/runner.ts",
+    "smoke": "tsx scripts/live-smoke.ts",
+    "preflight": "tsx scripts/doctor.ts",
+    "reset:demo": "tsx scripts/reset-demo.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.125.0",
+    "@hubspot/api-client": "^14.0.1",
+    "@slack/bolt": "^5.1.0",
+    "@uselemma/tracing": "^7.12.0",
+    "dotenv": "^17.4.2",
+    "googleapis": "^180.0.0",
+    "postgres": "^3.4.9",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.5.1",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.0"
+  }
+}

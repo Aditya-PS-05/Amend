@@ -1,0 +1,27 @@
+display_information:
+  name: Amend
+  description: Keeps HubSpot and Gmail correct when Slack instructions change.
+  background_color: "#1f2937"
+features:
+  bot_user:
+    display_name: Amend
+    always_online: true
+oauth_config:
+  scopes:
+    bot:
+      - channels:history
+      - groups:history
+      - channels:read
+      - groups:read
+      - chat:write
+      - files:read
+settings:
+  event_subscriptions:
+    bot_events:
+      - message.channels
+      - message.groups
+  interactivity:
+    is_enabled: true
+  org_deploy_enabled: false
+  socket_mode_enabled: true
+  token_rotation_enabled: false

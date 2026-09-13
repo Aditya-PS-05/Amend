@@ -1,0 +1,175 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1789336448034,
+  "projectRoot": "/home/aditya/my-work/AI/hack/amend",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "vitest",
+        "version": "5.0.0",
+        "category": "testing"
+      }
+    ],
+    "packageManager": "pnpm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": "pnpm test",
+    "lintCommand": null,
+    "devCommand": "pnpm dev",
+    "scripts": {
+      "dev": "tsx watch src/main.ts",
+      "start": "tsx src/main.ts",
+      "typecheck": "tsc --noEmit",
+      "test": "vitest run",
+      "eval": "tsx evals/runner.ts",
+      "db:migrate": "tsx src/db/migrate.ts",
+      "setup:hubspot": "tsx scripts/setup-hubspot.ts",
+      "setup:gmail": "tsx scripts/gmail-auth.ts",
+      "eval:extraction": "tsx evals/extraction.ts",
+      "viewer:demo": "tsx scripts/viewer-demo.ts",
+      "eval:pg": "EVAL_DATABASE_URL=postgres://postgres:amend@127.0.0.1:55432/amend tsx evals/runner.ts",
+      "smoke": "tsx scripts/live-smoke.ts",
+      "preflight": "tsx scripts/doctor.ts",
+      "reset:demo": "tsx scripts/reset-demo.ts"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": "*.test.ts",
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": true,
+    "workspaces": [],
+    "mainDirectories": [
+      "docs",
+      "scripts",
+      "src",
+      "test"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 5,
+      "lastAccessed": 1789336448025,
+      "keyFiles": [
+        "SETUP.md",
+        "demo-script.md",
+        "reliability-brief.md",
+        "slack-manifest.multi-workspace.yaml",
+        "slack-manifest.yaml"
+      ]
+    },
+    "evals": {
+      "path": "evals",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1789336448025,
+      "keyFiles": [
+        "extraction.ts",
+        "harness.ts",
+        "runner.ts",
+        "scenarios.ts"
+      ]
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 6,
+      "lastAccessed": 1789336448030,
+      "keyFiles": [
+        "doctor.ts",
+        "gmail-auth.ts",
+        "live-smoke.ts",
+        "reset-demo.ts",
+        "setup-hubspot.ts"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 2,
+      "lastAccessed": 1789336448032,
+      "keyFiles": [
+        "main.ts",
+        "telemetry.ts"
+      ]
+    },
+    "test": {
+      "path": "test",
+      "purpose": "Test files",
+      "fileCount": 1,
+      "lastAccessed": 1789336448032,
+      "keyFiles": [
+        "scenarios.test.ts"
+      ]
+    },
+    "evals/out": {
+      "path": "evals/out",
+      "purpose": "Build output",
+      "fileCount": 3,
+      "lastAccessed": 1789336448033,
+      "keyFiles": [
+        "extraction.md",
+        "results.json",
+        "scoreboard.md"
+      ]
+    },
+    "test/helpers": {
+      "path": "test/helpers",
+      "purpose": "Helper functions",
+      "fileCount": 2,
+      "lastAccessed": 1789336448033,
+      "keyFiles": [
+        "world.smoke.test.ts",
+        "world.ts"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "src/llm/draft-email.ts",
+      "accessCount": 1,
+      "lastAccessed": 1789336460549,
+      "type": "file"
+    },
+    {
+      "path": "test/adversarial/reconcile.test.ts",
+      "accessCount": 1,
+      "lastAccessed": 1789336490934,
+      "type": "file"
+    },
+    {
+      "path": "test/adversarial/attachments.test.ts",
+      "accessCount": 1,
+      "lastAccessed": 1789337184899,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
